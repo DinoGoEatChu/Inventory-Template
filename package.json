@@ -1,0 +1,23 @@
+{
+  "name": "invoice-app",
+  "version": "1.0.0",
+  "description": "an Electron invoice app for generating invoices",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "mocha tests"
+  },
+  "author": "Leyla Gulieva",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.3.1",
+    "mocha": "^9.1.3"
+  },
+  "dependencies": {
+    "electron-pdf": "^0.4.3",
+    "electron-pdf-window": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "pdfkit": "^0.13.0",
+    "uuid": "^9.0.0"
+  }
+}

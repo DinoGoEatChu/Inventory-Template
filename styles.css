@@ -1,0 +1,199 @@
+/* Style for the entire page */
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  width: 798px;
+}
+
+/* Style for the header */
+header {
+  background-color: #eee;
+  padding-left: 15px;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+.invoice-label {
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+}
+
+.invoice-details {
+  float: left;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 317px;
+  height: 116px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+}
+
+.invoice-details label {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-align: right;
+  width: 106px;
+}
+
+.invoice-details input[type="text"],
+.invoice-details input[type="date"] {
+  width: 50%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.car-details {
+  float: left;
+  text-align: left;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 260px;
+  height: 116px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.car-details label {
+  display: inline-block;
+  margin-right: 5px;
+  text-align: right;
+  width: 64px;
+}
+
+.car-details input[type="text"] {
+  width: 50%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the invoice table */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  width: 750px;
+  margin-top: -37px;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.invoice-table th {
+  background-color: #eee;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+.invoice-table td input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.invoice-table td input[readonly] {
+  background-color: #f7f7f7;
+}
+
+.invoice-table td input[name="number"] {
+  width: 75%;
+}
+
+.invoice-table td input[name="description"] {
+  width: 99%;
+}
+
+.invoice-table td input[name="quantity"],
+.invoice-table td input[name="item-Cost"],
+.invoice-table td input[name="total-Cost"] {
+  width: 90%;
+}
+
+.invoice-table tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+.main-table {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 73px;
+  width: 750px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-b {
+  margin-top: 10px;
+}
+
+.main-table th:nth-child(1),
+.main-table td:nth-child(1) {
+  width: 5%;
+}
+
+.main-table th:nth-child(2),
+.main-table td:nth-child(2) {
+  width: 60%;
+}
+
+.main-table th:nth-child(3),
+.main-table td:nth-child(3) {
+  width: 10%;
+}
+
+.main-table th:nth-child(4),
+.main-table td:nth-child(4) {
+  width: 10%;
+}
+
+.main-table th:nth-child(5),
+.main-table td:nth-child(5) {
+  width: 15%;
+}
+
+@media print {
+  .invoice-table td input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: black;
+    background-color: transparent;
+  }
+  .invoice-table td input[readonly] {
+    background-color: transparent;
+  }
+  .submit-b {
+    display: none;
+  }
+  .invoice-table th,
+  .invoice-table td {
+    border: none;  
+  }
+}

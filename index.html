@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <form id="invoice-form">
+                <h1>LRG Auto Sales Co.</h1>
+                <h3>176 Stewart Rd. SW<br>Pacific WA 98047</h3>
+        </header>
+
+        <div class="invoice-details">
+            <label for="invoice-number">Invoice Number:</label>
+            <input type="text" id="invoice-number" name="invoice-number" placeholder="Auto-generated" readonly>
+
+            <label for="invoice-date">Invoice Date:</label>
+            <input type="text" id="invoice-date" name="invoice-date">
+
+            <label for="client-name">Customer Name:</label>
+            <input type="text" id="client-name" name="client-name">
+
+            <label for="client-number">Phone Number:</label>
+            <input type="text" id="client-number" name="client-number">
+        </div>
+        <div class="car-details">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make">
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year">
+
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color">
+
+            <label for="vin">VIN:</label>
+            <input type="text" id="vin" name="vin">
+        </div>
+    </div>
+    <h2 class="invoice-label">I N V O I C E</h2>
+    <div class="main-table">
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Item Cost</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-table-body">
+                <tr>
+                    <td class="row-number"><input type="text" name="number" readonly></td>
+                    <td><input type="text" name="description"></td>
+                    <td><input type="number" name="quantity"></td>
+                    <td><input type="price" name="item-Cost"></td>
+                    <td><input type="price" name="total-Cost" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="submit-b" type="submit">Save Invoice</button>
+    </form>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
